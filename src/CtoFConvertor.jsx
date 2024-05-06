@@ -7,14 +7,16 @@ export const CtoFConvertor = () => {
     const [faranheit, setFaranheit] = React.useState(32);
 
     const calcCelsius = (e) => {
-        setCelsius(e.target.value)
-        setFaranheit((celsius * 9/5) + 32);
-        setWaterBoil(celsius >= 36 ? 'Water will boil at this temperature' : 'Water will NOT boil at this temperature')
+        const celsiusValue = e.target.value;
+        setCelsius(celsiusValue)
+        setFaranheit((celsiusValue * 9/5) + 32);
+        setWaterBoil(celsiusValue >= 38 ? 'Water will boil at this temperature' : 'Water will NOT boil at this temperature')
     }
 
     const calcFaranheit = (e) => {
-        setFaranheit(e.target.value)
-        setCelsius((faranheit - 32)*5/9);
+        const faranheitValue = e.target.value;
+        setFaranheit(faranheitValue)
+        setCelsius((faranheitValue - 32)*5/9);
     }
 
     return <div>
