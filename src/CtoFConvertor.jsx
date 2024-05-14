@@ -14,7 +14,7 @@ export const CtoFConvertor = () => {
     }
 
     const calcFaranheit = (e) => {
-        const faranheitValue = e.target.value;
+        const faranheitValue = e.target.value; 
         setFaranheit(faranheitValue)
         setCelsius((faranheitValue - 32)*5/9);
     }
